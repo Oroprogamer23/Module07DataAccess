@@ -208,8 +208,7 @@ namespace Module07DataAccess.ViewModel
         private async Task DeletePersonal()
         {
             if (SelectedPersonal != null) return;
-            var answer = await Application.Current.MainPage.DisplayAlert
-                ("Confirm Delete", $"Are you sure you want to delete {SelectedPersonal.name}?", "Yes", "No");
+            var answer = await Application.Current.MainPage.DisplayAlert("Confirm Delete", $"Are you sure you want to delete {SelectedPersonal.name}?", "Yes", "No");
 
             if (!answer) return;
 
